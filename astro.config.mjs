@@ -19,21 +19,16 @@ export default defineConfig({
 			},
 			components: {
 				PageFrame: "./src/components/overrides/PageFrame.astro",
+				LastUpdated: "./src/components/overrides/LastUpdated.astro",
 				Footer: "./src/components/overrides/Footer.astro",
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			lastUpdated: true,
 			editLink: {
-				baseUrl: "https://github.com/feeeedox/timolia-howto/tree/main/docs/",
+				baseUrl: "https://github.com/feeeedox/timolia-howto/tree/main",
 			},
 			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'about' },
-					],
-				},
+				'about',
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
