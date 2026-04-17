@@ -1,0 +1,80 @@
+.administrator {
+    color: #2a84c0;
+}
+
+.sysadmin {
+    color: #009e18;
+}
+
+.developer-plus {
+    color: #009e18;
+}
+
+.developer {
+    color: #009e18;
+}
+
+.moderator {
+    color: #da0101;
+}
+
+.supporter-plus {
+    color: #ebd700;
+}
+
+.supporter {
+    color: #ebd700;
+}
+
+.headbuilder {
+    color: #008a99;
+}
+
+.builder-plus {
+    color: #008a99;
+}
+
+.builder {
+    color: #008a99;
+}
+
+.content-plus {
+    color: #008a99;
+}
+
+.content {
+    color: #008a99;
+}
+
+.youtuber {
+    color: #b800b8;
+}
+
+.expert {
+    color: #00F9EC;
+}
+
+.mvp {
+    color: #55ff55;
+}
+
+.pro {
+    color: #ff9900;
+}
+
+.user {
+    color: #919191;
+}
+
+
+/*
+old ranks
+ */
+
+.management {
+    color: #009e18;
+}
+
+.creator {
+    color: #008a99;
+}

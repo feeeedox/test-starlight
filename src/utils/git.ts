@@ -16,18 +16,18 @@ export const GITHUB_OPTIONS: RequestInit = process.env.GITHUB_TOKEN
     ? {
         headers: {
             Accept: "application/vnd.github+json",
-            "User-Agent": "feeeedox/timolia-howto (https://flux.fedox.ovh)",
+            "User-Agent": "feeeedox/test-starlight (https://flux.fedox.ovh)",
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         },
     }
     : {
         headers: {
             Accept: "application/vnd.github+json",
-            "User-Agent": "feeeedox/timolia-howto (https://flux.fedox.ovh)",
+            "User-Agent": " feeeedox/test-starlight (https://flux.fedox.ovh)",
         },
     };
 
-export const REPO = "feeeedox/timolia-howto";
+export const REPO = "feeeedox/test-starlight";
 const cache = new Map<string, CommitterInfo>();
 
 export const getCommitInfo = async (filePath: string): Promise<CommitInfo | null> => {

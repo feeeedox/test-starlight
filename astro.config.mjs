@@ -25,13 +25,20 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			lastUpdated: true,
 			editLink: {
-				baseUrl: "https://github.com/feeeedox/timolia-howto/tree/main",
+				baseUrl: "https://github.com/feeeedox/test-starlight/tree/main",
 			},
+			customCss: [
+				"./src/styles/custom.css",
+				"./src/styles/ranks.css"
+			],
 			sidebar: [
 				'about',
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Allgemein',
+					translations: {
+						en: "General"
+					},
+					autogenerate: { directory: 'general' },
 				},
 			],
 		}),
