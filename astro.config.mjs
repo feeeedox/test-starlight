@@ -40,6 +40,20 @@ export default defineConfig({
 					},
 					autogenerate: { directory: 'general' },
 				},
+				{
+					label: 'Das Regelwerk',
+					translations: {
+						en: "Rules"
+					},
+					autogenerate: { directory: 'rules' },
+				},
+				{
+					label: 'Games',
+					translations: {
+						en: "Games"
+					},
+					autogenerate: { directory: 'games' },
+				},
 			],
 		}),
 	],

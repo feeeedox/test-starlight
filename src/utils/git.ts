@@ -45,7 +45,8 @@ export const getCommitInfo = async (filePath: string): Promise<CommitInfo | null
 
     const info: CommitterInfo = { name, href: `mailto:${email}` };
 
-    const res = await fetch(`https://api.github.com/repos/${REPO}/commits/${hash}`, GITHUB_OPTIONS);
+    try {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/commits/${hash}`, GITHUB_OPTIONS);
     if (res.ok) {
         const commit = await res.json();
         info.href = commit.author.html_url;
@@ -54,4 +55,8 @@ export const getCommitInfo = async (filePath: string): Promise<CommitInfo | null
 
     cache.set(email, info);
     return { hash, committer: info };
+    } catch(e: any) {
+        console.error('Error fetching from github: ' + e)
+        return null;
+    }
 };
