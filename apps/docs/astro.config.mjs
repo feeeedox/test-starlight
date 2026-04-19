@@ -29,6 +29,7 @@ export default defineConfig({
 				LastUpdated: "./src/components/overrides/LastUpdated.astro",
 				ThemeSelect: './src/components/overrides/ThemeSwitcher.astro',
 				Footer: "./src/components/overrides/Footer.astro",
+				LanguageSelect: './src/components/overrides/LanguageSwitcher.astro',
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			lastUpdated: true,

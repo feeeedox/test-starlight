@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+src/content/docs/team/changes.mdx
+src/content/docs/team/members.mdx
+src/content/docs/team/responsibilites.mdx

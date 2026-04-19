@@ -1,0 +1,168 @@
+---
+import config from 'virtual:starlight/user-config';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Icon } from '@astrojs/starlight/components';
+
+const { locales, defaultLocale } = config;
+
+if (!locales) {
+    throw new Error('i18n locales are not defined in the Starlight config.');
+}
+
+const currentLocale = Astro.currentLocale || 'root';
+
+const currentLabel = locales[currentLocale]?.label || locales.root?.label || 'Language';
+
+function getTargetLink(localeCode: string) {
+    const targetPrefix = localeCode === 'root' ? '' : localeCode;
+    const segments = Astro.url.pathname.split('/').filter(Boolean);
+
+    if (!locales) {
+        throw new Error('i18n locales are not defined in the Starlight config.');
+    }
+
+    if (Object.keys(locales).includes(segments[0])) {
+        segments.shift();
+    }
+
+    const base = segments.join('/');
+
+    const langCode = localeCode === 'root' ? (locales.root?.lang || 'de') : localeCode;
+
+    return getRelativeLocaleUrl(langCode, base);
+}
+---
+
+<div class="language-dropdown">
+    <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+        <Icon name="translate" size="1.2rem" />
+        <span>{currentLabel}</span>
+        <Icon name="down-caret" size="1rem" class="caret" />
+    </button>
+
+    <ul class="dropdown-menu">
+        {Object.entries(locales).map(([code, localeConfig]) => {
+            const isRootActive = currentLocale === 'root' || currentLocale === locales.root?.lang;
+            const active = code === currentLocale || (code === 'root' && isRootActive);
+
+            return (
+                    <li>
+                        <a
+                                href={getTargetLink(code)}
+                                class:list={[{ active: active }]}
+                        >
+                            {localeConfig.label}
+                            {active && <Icon name="approve-check" size="1rem" />}
+                        </a>
+                    </li>
+            )
+        })}
+    </ul>
+</div>
+
+<script>
+    const trigger = document.querySelector('.dropdown-trigger');
+    const dropdown = document.querySelector('.language-dropdown');
+
+    trigger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown?.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', () => {
+        dropdown?.classList.remove('is-open');
+    });
+</script>
+
+<style>
+    .language-dropdown {
+        position: relative;
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .dropdown-trigger {
+        appearance: none;
+        background: transparent;
+        border: 1px solid var(--sl-color-gray-5);
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        color: var(--sl-color-gray-2);
+        font-family: var(--sl-font-system);
+        font-size: var(--sl-text-sm);
+        transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .dropdown-trigger:hover {
+        background-color: var(--sl-color-gray-6);
+        border-color: var(--sl-color-gray-4);
+    }
+
+    .dropdown-menu {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0.3rem !important;
+
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: 0;
+        min-width: 140px;
+        background-color: var(--sl-color-bg-nav);
+        border: 1px solid var(--sl-color-gray-5);
+        border-radius: 0.4rem;
+        box-shadow: var(--sl-shadow-md);
+        z-index: 1000;
+
+        display: none;
+    }
+
+    .is-open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dropdown-menu li::before {
+        display: none !important;
+    }
+
+    .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0.75rem;
+        text-decoration: none !important;
+        color: var(--sl-color-gray-2) !important;
+        font-size: var(--sl-text-sm);
+        border-radius: 0.25rem;
+        transition: background 0.15s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: var(--sl-color-gray-6) !important;
+        color: var(--sl-color-white) !important;
+    }
+
+    .dropdown-menu a.active {
+        color: var(--sl-color-text-accent) !important;
+        font-weight: 600;
+    }
+
+    .caret {
+        opacity: 0.7;
+        transition: transform 0.2s ease;
+    }
+    .is-open .caret {
+        transform: rotate(180deg);
+    }
+</style>

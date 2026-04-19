@@ -42,7 +42,7 @@ export function generateChangesPage(teamlers) {
             const rankFrom = change.rankFrom ? change.rankFrom.male : '-';
             const rankTo = change.rankTo ? change.rankTo.male : '-';
 
-            content += `| ${playerName} | ${rankFrom} | ${rankTo} | ${change.date} |\n`;
+            content += `| ${playerName} | <span class='${change.rankFrom.cssClass}'>${rankFrom}</span> | <span class='${change.rankTo.cssClass}'>${rankTo}</span> | ${change.date} |\n`;
         }
 
         content += '\n';
