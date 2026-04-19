@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Minecraft Ten";
+    src: url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.eot");
+    src: url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.svg#Minecraft Ten")format("svg");
+}
+
 .sl-markdown-content img:not(:where(.not-content *)) {
     margin: 0 auto;
 }

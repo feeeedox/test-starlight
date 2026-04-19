@@ -1,6 +1,6 @@
 ---
 title: Reports und Entbannungen
-description: Hier findest du alle Infos bzgl. Reports und Entbannungsantraege.
+description: Hier findest du alle Infos bzgl. Reports und Entbannungsanträge.
 ---
 
 # Spieler melden und Entschuldigungen

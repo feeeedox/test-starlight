@@ -1,6 +1,6 @@
 ---
 title: Games
-description: Alle Regeln fuer die verschiedenen Spiele auf Timolia.
+description: Alle Regeln für die verschiedenen Spiele auf Timolia.
 ---
 
 ## §1 – Allgemein

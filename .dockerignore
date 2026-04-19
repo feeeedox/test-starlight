@@ -22,5 +22,5 @@ notes.txt
 
 # Docker files themselves
 Dockerfile
-docker-compose.yml
+deployment/docker-compose.yml
 .dockerignore
