@@ -157,7 +157,6 @@ export function generateResponsibilitiesPage(teamlers) {
 
         for (const resp of category.responsibilities) {
             if (resp.customTable) {
-                // Custom tables: always show (they have their own logic for empty rows)
                 content += `### ${resp.title}\n\n`;
 
                 if (resp.description) {

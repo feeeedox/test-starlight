@@ -19,26 +19,22 @@ const __dirname = dirname(__filename);
 async function generateTeamPages(config) {
     console.log('🚀 Timolia Team Page Generator\n');
 
-    // Load teamler data
     console.log('📖 Loading teamler data...');
     const teamlerData = JSON.parse(readFileSync(config.teamlerJsonPath, 'utf-8'));
     const teamlers = teamlerData.map(data => new Teamler(data));
     console.log(`✅ Loaded ${teamlers.length} team members\n`);
 
-    // Update names from Mojang API
     if (config.updateNames) {
         console.log('🔄 Updating player names from Mojang API...');
         await updateTeamlerNames(teamlers);
         console.log('✅ Name update complete\n');
     }
 
-    // Load translations
     console.log('🌍 Loading translations...');
     const translations = new Translations();
     translations.load(config.translationsPath);
     console.log('✅ Translations loaded\n');
 
-    // Generate pages
     console.log('📝 Generating pages...');
 
     const pages = [
@@ -51,24 +47,18 @@ async function generateTeamPages(config) {
         console.log(`  - Generating ${page.name}...`);
         const content = page.generator(teamlers);
 
-        // Write for each language
         for (const lang of ['de', 'en']) {
             const translatedContent = translations.replaceAll(content, lang);
 
-            // Determine output path based on language
             let outputPath;
             if (lang === 'de') {
-                // German (default): output/team/members.mdx
                 outputPath = join(config.outputPath, 'team', `${page.name}.mdx`);
             } else {
-                // English: output/en/team/members.mdx
                 outputPath = join(config.outputPath, 'en', 'team', `${page.name}.mdx`);
             }
 
-            // Ensure output directory exists
             mkdirSync(dirname(outputPath), { recursive: true });
 
-            // Add frontmatter for Starlight
             const frontmatter = generateFrontmatter(page.name, lang);
             const fullContent = `${frontmatter}\n${translatedContent}`;
 

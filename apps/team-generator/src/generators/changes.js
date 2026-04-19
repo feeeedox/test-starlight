@@ -15,14 +15,12 @@ export function generateChangesPage(teamlers) {
         allChanges.push(...changes);
     }
 
-    // Sort descending by date
     allChanges.sort((a, b) => {
         const dateA = Teamler.parseDate(a.date);
         const dateB = Teamler.parseDate(b.date);
         return dateB - dateA;
     });
 
-    // Group by month (MM.YYYY)
     const monthGroups = new Map();
 
     for (const change of allChanges) {

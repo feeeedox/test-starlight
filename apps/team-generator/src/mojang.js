@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
  */
 
 const MOJANG_API_URL = 'https://sessionserver.mojang.com/session/minecraft/profile/';
-const REQUEST_DELAY = 100; // ms between requests to avoid rate limiting
+const REQUEST_DELAY = 100;
 
 /**
  * Sleep function for rate limiting
@@ -50,11 +50,6 @@ export async function updateTeamlerNames(teamlers) {
 
     for (let i = 0; i < teamlers.length; i++) {
         const teamler = teamlers[i];
-
-        if (teamler.name && teamler.name !== 'Unknown') {
-            console.log(`[${i + 1}/${teamlers.length}] Using existing name: ${teamler.name}`);
-            continue;
-        }
 
         const name = await getNameFromMojang(teamler.uuid);
 
