@@ -22,4 +22,8 @@ pnpm-debug.log*
 
 src/content/docs/team/changes.mdx
 src/content/docs/team/members.mdx
-src/content/docs/team/responsibilites.mdx
+src/content/docs/team/responsibilities.mdx
+
+src/content/docs/en/team/changes.mdx
+src/content/docs/en/team/members.mdx
+src/content/docs/en/team/responsibilities.mdx
