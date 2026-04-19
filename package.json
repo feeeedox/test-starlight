@@ -1,17 +1,26 @@
 {
   "name": "timolia-howto",
-  "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Documentation for Timolia, the Minecraft server network",
+  "main": "index.js",
+  "author": "Fedox",
+  "license": "MIT",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:client": "turbo dev --filter=client",
+    "dev:server": "turbo dev --filter=server",
+    "lint": "turbo lint"
   },
-  "dependencies": {
-    "@astrojs/starlight": "^0.38.3",
-    "astro": "^6.0.1",
-    "sharp": "^0.34.2"
-  }
+  "private": true,
+  "devDependencies": {
+    "@nuxt/kit": "^4.2.2",
+    "prettier": "^3.7.4",
+    "turbo": "^2.6.3"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "yarn@4.12.0"
 }

@@ -1,0 +1,26 @@
+# Dependencies (installed fresh in Docker)
+node_modules
+apps/*/node_modules
+apps/docs/node_modules
+
+# Build output (generated in Docker)
+apps/docs/dist
+apps/docs/.astro
+apps/team-generator/output
+
+# Generated team pages (generated in Docker)
+apps/docs/src/content/docs/team
+apps/docs/src/content/docs/en/team
+
+# Dev / tooling
+.git
+.gitignore
+**/.DS_Store
+*.log
+README.md
+notes.txt
+
+# Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore

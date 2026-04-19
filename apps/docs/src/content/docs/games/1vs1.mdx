@@ -1,0 +1,193 @@
+---
+title: 1vs1
+description: Alle Infos von 1vs1 findest du hier.
+---
+import { Image } from 'astro:assets'
+import banner from '../../../assets/images/games/1vs1.png'
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">1vs1</div>
+    <div class="banner-text-gradient">1vs1</div>
+</div>
+
+## Das Spielprinzip
+
+Spiele alleine oder im Team und beweise dein Können in 1vs1. Wähle eigene oder andere Kits und finde in fairen Kämpfen heraus, wer besser ist.
+Das Kit lässt sich frei aus allem zusammenstellen, was Creative-Inventar, Amboss und Verzauberungstisch zu bieten haben.
+Über den Schwarzhändler können "Hackerkits" erstellt werden, die modifizierte Items beinhalten.
+Arbeite dich in unserem Ranked-System die Karriereleiter hinauf und erreiche den höchsten Rang des Servers.
+Fordere andere alleine oder im Team heraus oder nimm an einem Turnier teil und beweise dich gegenüber anderen.
+
+<YouTube id="https://youtu.be/CRG94nn-7C4" />
+
+<p></p>
+
+## Und so gehts
+- Im Kit-Bereich kann das eigene Kit erstellt und beliebig oft verändert werden.
+- Mit einem Rechtsklick auf die Warteschlange können Kit-Einstellungen und Optionen ausgewählt und verändert werden.
+- Per Linksklick mit dem Diamantschwert auf den Warteschlangenzombie kann die Warteschlange betreten werden.
+- Mit einem Linksklick auf jemanden wird diese Person zu einem Duell herausgefordert, mit einem Rechtsklick versendest du eine Team-Einladung.
+- Erzwinge das Ende eines Kampfes mit `/endmatch`. Mehr Infos dazu findest du [hier](#endmatch).
+- Blöcke zerplatzen nach 15 Sekunden in jedem Turnier und Ranked Match, in regulären Spielen, wenn `/endmatch` eingesetzt wurde.
+- Ein Klick auf den Nether-Stern in der Hotbar bietet eine Übersicht über alle Arenen der Lobby.
+- Mit einem Rechtsklick auf eine Person beobachtest du den Kampf aus ihrer Perspektive.
+- Über `/settings` kannst du Einstellungsmöglichkeiten zu der Warteschlange, den Kits, Maps und Kämpfen sowie verschiedene Optionen für die Lobby und den Chat einsehen.
+- Um noch schneller noch fairere Matches zu finden, kannst du in der globalen Warteschlange gegen die Spieler:innen auf allen Lobbys spielen.
+- Sämtliche Kampfstatistiken kannst du mit `/statsmenu` oder beim Statistiken-Skelett in der Lobby einsehen.
+
+
+## Ranked System
+
+Arbeite dich in unserem Ranked-System die Karriereleiter hinauf und erreiche den höchsten Rang des Servers. 
+Insgesamt gibt es 16 Ränge, die es zu erreichen gilt. Alle Spieler:innen besitzen in 1vs1 einen zugewiesenen Wert, die Ranked Punkte. 
+Bei einem Sieg erhöhen sie sich, verlierst du ein Spiel, werden dir Punkte abgezogen. Dein Rang bestimmt sich aus der Höhe deiner Punkte. 
+Die genauen Punktegrenzen für die einzelnen Ränge kannst du ingame mit dem Befehl `/ranks` aufrufen. Alle Infos zu deinem aktuellen Rang und deinen Punkteständen findest du unter `/season`.
+
+| Rang | Punkte | |
+| :------: | :------: | ----- |
+| <b><span class='minecraft-darkgray'>1</span></b> | 0 - 99 |
+| <b><span class='minecraft-darkgray'>2</span></b> | 100 - 299 |
+| <b><span class='minecraft-gray'>3</span></b> | 300 - 699 |
+| <b><span class='minecraft-white'>4</span></b> | 700 - 1199 |
+| <b><span class='minecraft-green'>5</span></b> | 1200 - 1799 |
+| <b><span class='minecraft-darkgreen'>6</span></b> | 1800 - 2399 |
+| <b><span class='minecraft-lightpurple'>7</span></b> | 2400 - 2999 |
+| <b><span class='minecraft-darkpurple'>8</span></b> | 3000 - 3599 |
+| <b><span class='minecraft-blue'>9</span></b> | 3600 - 4199 |
+| <b><span class='minecraft-darkblue'>10</span></b> | 4200 - 4799 |
+| <b><span class='minecraft-yellow'>11</span></b> | 4800 - 5399 |
+| <b><span class='minecraft-gold'>12</span></b> | 5400 - 5999 |
+| <b><span class='minecraft-darkred'>13</span></b> | 6000 - 6599 |
+| <b><span class='minecraft-gray'>14</span></b> | 6600 - 7199 |
+| <b><span class='minecraft-gold'>15</span></b> | 7200 - 7999 |
+| <b><span class='minecraft-darkaqua'>16</span></b> | 8000+ |
+
+
+### Berechnung der Punkte
+Für jedes der 6 Ranked Kits einer Season gibt es eine eigene Rangliste. Die Punkte werden für jedes Ranked Kit unabhängig berechnet.
+Deine globalen Ranked Punkte, aus welchen sich dein Rang ergibt, sind die Summe deiner Ranked Punkte in den einzelnen Kits.
+Du startest bei jedem Kit mit 0 Punkten. Für gewonnene Spiele bekommst du Punkte gutgeschrieben, für verlorene abgezogen. Neben den Ranked Punkten haben alle Spieler:innen für jedes Kit auch einen Elo Wert. 
+Dieser wird dir nicht angezeigt, sondern versucht im Hintergrund deine Spielstärke zu ermitteln. Wie groß die Differenz zwischen deinen Punkten und deiner Elo sowie der Elo der Gegner:innen ist, bestimmt, wie viele Punkte du für Sieg oder Niederlage dazugewinnst bzw. verlierst.
+Deine Anfangselo beträgt in jedem Kit 1000. Wie genau sich die Elo in unserem System berechnet, erfährst du [hier](https://de.wikipedia.org/wiki/Elo-Zahl).
+
+
+### Seasons
+Am Ende jeder Season werden alle Ranked Ranglisten und Punkte zurückgesetzt und die Bestplatzierten der letzten Season werden in der PvP Lobby angezeigt. Die gesamten Statistiken (auch deine) der letzten Seasons kannst du ingame mit `/season [Nummer]` aufrufen. 
+In jeder Season werden 6 Ranked Kits angeboten. Welche das derzeit sind und wie lange die aktuelle Season noch dauert, siehst du ingame mit `/season`.
+Die 6 Kits setzen sich aus 3 vom Team vorgegeben Kits und 3 von der Community bestimmten Kits zusammen. Das Voting für die Communitykits findet jeweils in der letzten Woche der vorherigen Season statt.
+
+
+## Winstreaks
+Verdiene mit Winstreaks zusätzlich Pixel und kaufe dir mit diesen tolle Items im Pixelshop. [Premium](/ranks/premium/)-Spieler:innen erhalten mehr Pixel.
+
+| Winstreak | Pixel |
+| ------ | ------ |
+| 3 Siege | 3 Pixel |
+| 6 Siege | 6 Pixel |
+| 10 Siege | 10 Pixel |
+| 15 Siege | 10 Pixel |
+| 20 Siege | 15 Pixel |
+| 30 Siege | 30 Pixel | 
+| 40 Siege | 30 Pixel |
+| 50 Siege | 40 Pixel |
+| 60 Siege | 40 Pixel |
+| 70 Siege | 40 Pixel |
+| 80 Siege | 40 Pixel |
+| 90 Siege | 40 Pixel |
+| 100 Siege | 50 Pixel |
+
+Nachdem 100 Siege in Folge erreicht wurden steigen die Belohnungen nicht mehr an; man erhält nach je 10 weiteren Siegen dieselbe Belohnung.
+Mit dem Befehl `/winstreak` kannst du deine aktuelle Winstreak ansehen. Beachte: Deine Winstreak steigt nur, wenn du über die Warteschlange spielst.
+
+## FFA
+FFA ist eine Turnierform bei welcher alle Spieler auf einer gemeinsammen Map mit dem selben Start-Quipment gegeneinander Kämpfen. Je nach Einstellung des Turniererstellers verfügen die Spieler über mehrere Leben. 
+Dabei erhalten sie mit einem neuen Leben zwar eine weitere Chanche auf den Sieg, bekommen allerdings keine neuen Materialien zur verfügung gestellt. Daher ist die tacktische Verteilung und Nutzung des Equipments ein wichtiger bestandteil des Spieles. Ziel des Spieles ist es als letzte Person zu überleben. Wie bereits der Name impliziert kämpft jeder Spieler alleine gegen die Anderen, darum ist jegliche Form von unterstützung oder bevorzugung eines anderen Gegners währned des gesammten Turniers verboten. 
+
+## Freitagsturniere
+Jeden Freitag um 20:00 Uhr findet ein großes Timolia-Turnier statt. Dieses lässt sich mit `/join Timolia` von jedem 1vs1-Server betreten.
+Das Turnier wird gleichzeitig in einem Stream live übertragen. Die jeweiligen Streamer:innen und die Kits werden auf [Twitter](https://twitter.com/TimoliaTeam) und im [Timolia-Discord](/discord/) angekündigt.
+Der erste Platz hat die Möglichkeit, den [MVP-Rang](/ranks/premium/) für einen Monat zu gewinnen. 
+Nimmt der erste Platz das Risikomatch gegen die Streamer:innen an und gewinnt es, kann dieser sogar 2 Monate gewinnen. Verliert er allerdings, bekommt er nur einen halben Monat.
+Außerdem erhalten die Top 3 eine Medaille sowie einen entsprechenden Subtitle. Alle, die es bis auf den Finalserver schaffen, erhalten zudem 3 Tage Pro!
+
+## Endmatch
+Mit `/endmatch` kann das Ende eines Kampfes erzwungen werden. Sobald dieser Befehl ausgeführt wurde, läuft ein Kampf nur noch eine Minute. Wer in den letzten 30 Sekunden durchschnittlich näher an der Mitte war, gewinnt den Kampf. In einem Turnier lässt sich dieser Befehl natürlich nicht verwenden.
+Erst nach einer festgelegten Zeit kann `/endmatch` benutzt werden. Diese ist bei verschiedenen Kits unterschiedlich.  
+Hier findest du eine Übersicht der Mindestspielzeiten bis zum Endmatch:
+
+| Kit        | Zeit         |
+| ---------- | ------------ |
+| 1Bar       | 60 Sekunden  |
+| Basic      | 45 Sekunden  |
+| NoHitDelay | 60 Sekunden  |
+| OP         | 60 Sekunden  |
+| PotPVP     | 300 Sekunden |
+| Sniper     | 300 Sekunden |
+| Soup       | 300 Sekunden |
+| Standard   | 45 Sekunden  |
+| UHC        | 180 Sekunden |
+| SG         | 180 Sekunden |
+| Eigene Kits | 30 Sekunden |
+
+
+
+## Premium-Features
+- Während normale Spieler:innen lediglich ein Kit speichern können, stehen Premium-Spieler:innen je nach Rang bis zu 5 Slots zur Verfügung. Bei der Mapauswahl haben normale Spieler:innen Zugriff auf einen und Premium-Spieler:innen je nach Rang bis auf 5 Slots.
+- Des Weiteren kann man mit Premium Turniere (`/create`) und Teams mit mehr als zwei Mitgliedern erstellen. Einige Ränge können sogar serverweite 1vs1-Turniere starten (`/create`).
+- Erhalte mit Premium bis zu drei mal mehr Pixel.
+- Setze dir im Kitbereich mit `/hat` Items in deiner Hand auf den Kopf.
+- Wähle mit `/team setcolor` deine Teamfarbe aus.
+- Werde mit `/togglerank` in der normalen Standardfarbe angezeigt.
+
+Welcher Premium-Rang dir welche Vorteile bietet, kannst du [hier](/ranks/premium/) nachlesen.
+
+## Die Befehle
+
+| Befehl | Funktion |
+| ------ | -------- |
+| `/bestofx <Name> <Anzahl>`      | Fordert eine Person zu einem Best of 3 oder Best of 5 heraus |
+| `/challenge <Name>`, `/c`       | Fordert andere Spieler:innen zu einem Duell heraus |
+| `/compare <Name> <Name>`        | Zeigt die Kampfstatistik zweier Spieler:innen an |
+| `/endmatch`                     | Der Kampf wird nach einer Minute mit Entscheidung durch die Mitte beendet |
+| `/importkit <Zahl>`             | Importiere eines deiner Kits im Kitbereich |
+| `/join <Name>`                  | Tritt einem Turnier bei |
+| `/join <Name> <Passwort>`       | Tritt einem passwortgeschützten Turnier bei |
+| `/kit`, `/k`                    | Öffnet das ausgewählte Kit in deinem Inventar |
+| `/kit <Name(:1/2/3/4/5)>`       | Wählt das Kit von anderen Spieler:innen aus |
+| `/kitinfo`                      | Zeigt Infos über das ausgewählte Kit |
+| `/kits`                         | Listet dir alle von Timolia erstellten Kits auf |
+| `/lastinv <Name>`, `/inv`       | Zeigt das letzte Inventar einer Person |
+| `/leave`, `/l`                  | Verlässt ein Turnier bzw. die Warteschlange |
+| `/liveinv <Name>`, `/liveinventory` | Zeigt das aktuelle Inventar einer Person |
+| `/matchinfo`                    | Zeigt Informationen über den aktuellen Kampf |
+| `/queue`, `/q`                  | Fügt dich zur Warteschlange hinzu |
+| `/rankinfo`, `/ranginfo`        | Zeigt Informationen zum aktuellen Rang |
+| `/season [Nummer]`              | Zeigt das Kit der aktuellen oder angegebenen Season, Bestenlisten, deine Punkte und Platzierungen an |
+| `/settings`                     | Öffnet die Einstellungen |
+| `/spectate <Name>`, `/spec`     | Lässt dich einen Kampf beobachten |
+| `/stats`                        | Zeigt dir deine Stats an |
+| `/stats <Name>`                 | Zeigt dir die Stats von anderen Spieler:innen an |
+| `/statsmenu [Name]`             | Öffnet das Statsmenü |
+| `/surrender`                    | Man tötet sich selbst und beendet den Kampf vorzeitig |
+| `/t`                            | Zeigt die Turnierinformationen |
+| `/team accept <Name>`           | Tritt einem Team bei |
+| `/team invite <Name>`           | Lädt eine Person in dein Team ein |
+| `/team kick <Name>`             | Kickt eine Person aus deinem Team |
+| `/team leave <Name>`            | Zieht eine Teameinladung zurück |
+| `/winstreak`, `/streak`         | Zeigt deine aktuelle Winstreak |
+| `/xp <Level>`                   | Setzt ein XP-Level für dein Kit |
+**[Premium](/ranks/premium/) only**:
+| `/create [Passwort]`            | Erstellt ein Turnier (optional mit einem Passwort) |
+| `/modify`                       | Bearbeitet die Turniereinstellungen |
+| `/near <kit> [Name]`            | Zeigt für jede Kitrangliste die Entfernung zum nächsten Rang an |
+| `/start [Zeit]`                 | Startet dein Turnier |
+**[<span class='pro'>Pro+</span>](/ranks/premium/) only**:
+| `/hat`                          | Setzt das Item in deiner Hand als den Helm deines Kits |
+| `/rankinfo`                     | Gibt Informationen über deinen aktuellen globalen Rang aus |
+| `/roadToKD <KD-Ziel>`, `/roadToWL <KD-Ziel>` | Zeigt die Anzahl zu gewinnender Spiele an, um die K/D zu erreichen |
+| `/team setcolor`                | Färbt euren Namen entsprechend der gewählten Farbe |
+
+## Arenen und Maps
+Selbstgebaute Maps für diesen Modus können im [Discord](https://timolia.de/discord) eingesendet werden.

@@ -1,0 +1,113 @@
+.sl-markdown-content img:not(:where(.not-content *)) {
+    margin: 0 auto;
+}
+.sl-markdown-content img:not(:where(.not-content *)):not([alt="Diagram"]) {
+    width: 100%;
+}
+/* except when we want them inline */
+.sl-markdown-content :is(img.img-inline, .img-inline img) {
+    margin: 0;
+    width: auto;
+}
+.sl-markdown-content img.img-inline {
+    display: inline-block;
+}
+.sl-markdown-content :is(img.img-inline-center, .img-inline-center img) {
+    width: auto;
+}
+
+/* use custom font first instead of system */
+.sl-badge {
+    font-family: var(--__sl-font-mono);
+}
+
+.hero > img {
+    width: min(70%, 20rem);
+}
+
+/* make index page hero smaller vertically */
+@media (min-width: 50rem) {
+    .hero {
+        padding-block: clamp(2.5rem, calc(1rem + 2.5vmin), 10rem);
+    }
+}
+
+/* fix too large TOC on large screens */
+@media (min-width: 96rem) {
+    :root {
+        --sl-content-width: 64rem;
+    }
+}
+
+/* magic */
+@view-transition {
+    navigation: auto;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    transform: scale(1.1);
+}
+
+.banner-wrapper {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.banner-text-gradient {
+    position: absolute;
+    top: 45%;
+    letter-spacing: 0.2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: linear-gradient(to bottom, #FFDF00, #F28D00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Minecraft Ten", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+     font-size: min(90px, 13vw);
+}
+
+.banner-text-shadow {
+    position: absolute;
+    top: 45%;
+    letter-spacing: 0.2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: min(90px, 13vw);
+    z-index: 1;
+    color: transparent;
+    font-family: "Minecraft Ten", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-shadow: 0 11px 0 rgba(0, 0, 0, 0.35);
+}
+
+.sidebar-content a {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+    border-radius: 6px;
+    margin: 2px 0;
+}
+
+.sidebar-content a[aria-current="page"] {
+    background: var(--sl-color-accent-low) !important;
+    color: var(--sl-color-accent-high) !important;
+    border-left: 4px solid var(--sl-color-accent);
+    font-weight: 600;
+}
+
+.sidebar-content details summary {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+    color: var(--sl-color-gray-3);
+    padding-top: 1rem;
+}

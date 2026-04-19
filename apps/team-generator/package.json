@@ -1,0 +1,25 @@
+
+{
+  "name": "team-generator",
+  "version": "1.0.0",
+  "description": "Generates Starlight MDX pages for Timolia team members",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "generate": "node src/index.js --output ../docs/src/content/docs",
+    "dev": "node --watch src/index.js",
+    "generate:local": "node src/index.js",
+    "build": "node src/index.js --output ../docs/src/content/docs"
+  },
+  "keywords": [
+    "timolia",
+    "team",
+    "generator",
+    "starlight"
+  ],
+  "author": "Fedox",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
