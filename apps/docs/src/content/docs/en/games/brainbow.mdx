@@ -1,0 +1,82 @@
+---
+title: BrainBow
+description: All the info for BrainBow can be found here.
+---
+
+import { Image } from 'astro:assets'
+import banner from '../../../../assets/images/games/BrainBow.png'
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+:::danger[Information]
+This mode is currently no longer available.
+:::
+
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">BrainBow</div>
+    <div class="banner-text-gradient">BrainBow</div>
+</div>
+
+## Game Concept
+
+In BrainBow, you can prove your archery skills together with your team. The team with the last survivors wins the round and secures the victory.
+
+<YouTube id="https://youtu.be/EPi7lAyV3R8" />
+
+<p></p>
+
+## How it works
+- Vote for the map of your choice with `/vote <Map>` or by clicking in the chat.
+- Up to four teams fight against each other in the arena.
+- At the start of the game, all teams are teleported to their bases, from which the game begins.
+- There are different blocks on the ground. If you stand on one of the special blocks, you can use its ability.
+- Redstone blocks shoot TNT, which must be fired into the opponent teams' score fields.
+- A hit by an opponent team subtracts one heart from your team; a hit by your team adds half a heart.
+- Once a team has no hearts left, its players can no longer respawn. When the last person is killed, the team is eliminated.
+- The last team alive wins the battle and receives the most points.
+- With 1000 points earned, the BrainBow bow can be unlocked in the lobby.
+
+---
+
+## The Blocks
+
+| Block | Name | Function |
+| :--- | :--- | :--- |
+| <span style="color:#CF0101">Redstone</span> | TNT Block | Must be shot into the opponent's score fields. |
+| <strong>Coal</strong> | Bomb | Kill opponents, destroy TNT or TNT blocks, and boost yourself upwards. |
+| <span style="color:#0000FF">Lapis Lazuli</span> | Ender Pearl | Helps with fast movement across the map. |
+| <span style="color:#64FE2E">Emerald</span> | Poison Vine | Poisons players within a certain radius. The effect only wears off back in your base. |
+| <span style="color:#D8D8D8">Quartz</span> | Snow Field | "Freezes" players within a certain radius. |
+
+---
+
+## Ranks in BrainBow
+
+| Rank | Points | Name |
+| :--- | :--- | :--- |
+| 1 | 64 | Bob |
+| 2 | 128 | No Danger |
+| 3 | 256 | Lucky Shot |
+| 4 | 512 | Amateur |
+| 5 | 1024 | Up-and-coming Archer |
+| 6 | 2048 | ??? |
+| 7 | 4096 | ??? |
+| 8 | 8129 | ??? |
+| 9 | 16348 | ??? |
+| 10 | 32768 | ??? |
+| 11 | 65536 | ??? |
+
+The remaining ranks remain secret until they have been achieved. To maintain the surprise factor, only the first few ranks are listed by name.
+
+## Premium Features
+- Premium players have up to four votes in the voting system, depending on their rank.
+- A favorite map can be added to the map voting at any time.
+- Premium players receive up to three times more Pixels.
+- Premium players can kick other people from a full team during the voting phase.
+- Be displayed in the normal standard color with `/togglerank`.
+
+You can read about which Premium rank offers which advantages [here](/ranks/premium/).
+
+## Arenas and Maps
+Self-built maps for this mode can be submitted on [Discord](https://timolia.de/discord).

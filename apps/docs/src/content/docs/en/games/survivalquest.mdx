@@ -1,0 +1,120 @@
+---
+title: SurvivalQuest
+description: All the info for SurvivalQuest can be found here.
+---
+
+import { Image } from 'astro:assets'
+import banner from '../../../../assets/images/games/SurvivalQuest.png'
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">SurvivalQuest</div>
+    <div class="banner-text-gradient">SurvivalQuest</div>
+</div>
+
+## Gameplay
+Are you a Vanilla expert? SurvivalQuest is about completing as many tasks as possible in a randomly generated Minecraft world. In each round, 25 tasks are randomly selected from over 200 different options. 
+A new round starts every 2 hours (at every even hour). 
+Defeat the other players in the round or secure your place in the (monthly) highscore!
+
+<p></p>
+
+## How it works
+- SurvivalQuest runs on Minecraft versions 1.16+. The higher version allows for more features and a greater variety of tasks.
+- The goal of the game is to collect the most points by completing tasks within 45 minutes.
+- After you have selected your first spawn point in the Quest Book, the tasks for the current round become visible.
+- Follow the task description to complete it. You will need all your Minecraft skills for this.
+
+---
+
+## The Quest Book
+Your Quest Book doesn't just show the current tasks. To let you focus entirely on your objectives, it contains several other useful functions:
+
+- **World Compass**: Choose a new spawn point every 8 minutes and teleport there.
+- **Mobile Workbench**: Built-in 3x3 crafting grid & recipe book—for the spontaneous hobby crafter.
+- **Ender Oven**: Don't want to wait for cooked meat? Neither do we. Roast your food while on the move!
+- **Ender Chest**: Inventory problems are a thing of the past. With the Quest Book, you can access your Ender Chest at any time.
+
+---
+
+## Sponsors and Lobby Adventure
+Sponsors help you in the game with special starting equipment or unique abilities. 
+Before the game begins, you can unlock a sponsor in the lobby by completing small tasks. Interact with the NPCs by right-clicking them.
+
+---
+
+## Point Calculation & Highscore Lists
+Want the highscore? Or just want to win the current round against your friends? Then you've come to the right place!
+
+- You receive points for completing tasks from the Quest Book.
+- Harder tasks give more points than easier ones; additionally, you get a time bonus the earlier you complete a task.
+- The difficulty of the current round can be seen in the Quest Book while still in the lobby. (Red = Hard, Blue = Medium, Green = Easy)
+- Bonus points are also awarded for every completed row in the Quest Book (Horizontal, Vertical, and Diagonal).
+- **But beware**: While dying doesn't lead to total loss thanks to KeepInventory, every unnecessary death will result in a **100-point deduction**!
+
+---
+
+## Special Game Variants
+SurvivalQuest features a variety of different modes and settings. Different variants start during specific events or randomly. You can see which variant was selected for the current round on the server sign in the lobby. Fortune decides!
+
+| Variant | Description |
+| :--- | :--- |
+| **All4One** | Everyone works together on one Quest Book. Each task only needs to be completed once. Work together or compete to finish the tasks before your fellow players to secure the points! |
+| **QuickSQ** | Classic "Bingo". The first player to complete a row (Horizontal, Vertical, Diagonal) wins. The simplest row guarantees a quick victory! |
+| **Small Quest Book** | Contains only 9 tasks instead of 25. This gives you more time for individual tasks. Perfect for beginners or quick challenges. |
+| **Randomizer** | For those who know Minecraft inside out. Loot tables are reshuffled every round: block drops, mob drops, and fishing drops are completely random. |
+| **RushSQ** | Tasks must be completed in a specified order. Only the current task is visible in the Quest Book. |
+| **MegaQuest** | The normal Quest Book isn't enough? In this variant, all possible tasks are activated and waiting to be completed. |
+
+---
+
+## Handicaps
+For an extra challenge. Handicaps are activated in certain challenges—or you can set up your own challenge on your user server.
+
+| Handicap | Description |
+| :--- | :--- |
+| **Max Hearts** | Limits player health (from 10 hearts down to 1/2 heart). |
+| **Sleepless** | Disables the day/night cycle. Infinite midnight with all its inhabitants. |
+| **UHC Mode** | Hearts do not regenerate through eating. |
+| **No KeepInventory** | Disables the item keeper; you lose your items upon death. |
+| **No World Compass** | Everyone has the same spawn point and the compass can only be used once at the start. |
+| **Nether Spawn** | All spawn points in the World Compass lead to the Nether. |
+| **More Vanilla** | Disables the mobile workbench, oven, and ender chest. Automatic enchanting/smelting is also disabled. |
+| **Empathy** | Damage you deal to other living creatures is reflected back onto you. |
+| **YOLO** | You cannot respawn after an unnecessary death. |
+
+---
+
+## Events & Challenges
+Special events and challenges start regularly in SurvivalQuest. An overview of the current events can always be found directly in the SurvivalQuest lobby.
+
+---
+
+## Commands
+
+| Command | Function |
+| :--- | :--- |
+| `/lobbygame challenge <Name> <Game>` | Challenges other players to a lobby game |
+| `/lobbygame open <GameId>` | Opens a lobby game of the specified GameId |
+| `/news`, `/sqnews`, `/sq news` | Shows the current news in the chat |
+| `/questbook`, `/qb` | Opens the Quest Book |
+| `/sq info` | Shows the game settings of the current round |
+| `/sq kit` | Receive a Quest Book and lobby items if they were lost |
+| `/sq questbook <Name>` | Opens the Quest Book of the desired player |
+| `/sq seed` | Shows the world seed of the current round |
+| `/sq team` | Receive information about your team |
+| `/sq tpa <Name>`, `/tpa <Name>` | Send a TPA request to other players |
+| `/stats <Name>`, `/sq top` | Shows player game statistics |
+
+**[<span class='expert'>Expert</span>](/ranks/premium/) only**:
+| Command | Function |
+| :--- | :--- |
+| `/start`, `/startgame`, `/sq start` | Set custom game settings in a private round |
+
+---
+
+## Premium Features
+- Premium players receive up to three times more Pixels.
+- Be displayed as a normal player with `/togglerank`.
+
+You can read about which Premium rank offers which advantages [here](/ranks/premium/).

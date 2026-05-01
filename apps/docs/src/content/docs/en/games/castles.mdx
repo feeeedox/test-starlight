@@ -1,0 +1,97 @@
+---
+title: Castles
+description: All the info for Castles can be found here.
+---
+
+import { Image } from 'astro:assets'
+import banner from '../../../../assets/images/games/Castles.png'
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">Castles</div>
+    <div class="banner-text-gradient">Castles</div>
+</div>
+
+## Gameplay
+Castles is a tactical game where you must capture the flag of the opposing teams, either alone or together with your teammates. Each team consists of a maximum of 4 players and starts the game in its own castle.
+
+<YouTube id="https://youtu.be/ZeydLQxk_Hg" />
+
+<p></p>
+
+## How it works
+- Vote for the map of your choice with `/vote <Map>` or by clicking in the chat.
+- The goal of the game is to steal the flag from the enemy castle, bring it back to your own base, and then kill all enemy players.
+- With the gold found in the Enderchest at your base and in chests on other islands, you can build structures or buy items.
+- In the various shops, you will find many useful items that allow you to attack the enemy base tactically or as quickly as possible.
+- As long as your team possesses a flag in its own base, you can respawn as often as you like. 
+- If all flags have been captured by opposing teams, they can no longer respawn unless a teammate can win a flag back.
+- If the game lasts a long time because a team has barricaded itself, the winner can be determined through "Flag Power"—owning the majority of flags over a longer period. 
+- The game ends as soon as all enemy players have died permanently.
+
+---
+
+## Ranks in Castles
+
+| Rank | Points | Name |
+| :--- | :--- | :--- |
+| 1 | 8 | Stalljunge (Stable Boy) |
+| 2 | 16 | Totengräber (Gravedigger) |
+| 3 | 32 | Nachtwächter (Night Watchman) |
+| 4 | 64 | Kämmerer (Chamberlain) |
+| 5 | 128 | Mundschenk (Cupbearer) |
+| 6 | 256 | Edelmann (Nobleman) |
+| 7 | 512 | Hofnarr (Court Jester) |
+| 8 | 1024 | Landmann (Countryman) |
+| 9 | 2048 | Heckenritter (Hedge Knight) |
+| 10 | 4096 | Ritter (Knight) |
+| 11 | 8192 | Marschall (Marshal) |
+| 12 | 16384 | Freiherr (Baron) |
+| 13 | 32768 | Baron (Baron) |
+| 14 | 65536 | Graf (Count) |
+| 15 | 131072 | Fürst (Prince) |
+| 16 | 262144 | Landgraf (Landgrave) |
+| 17 | 524288 | ??? |
+| 18 | 1048576 | ??? |
+| 19 | 2097152 | ??? |
+| 20 | 4194304 | ??? |
+| 21 | 8388608 | ??? |
+| 22 | 16777216 | ??? |
+
+The remaining ranks stay secret until the corresponding ranks have been achieved. To maintain the surprise factor, only the first few ranks are listed by name.
+
+---
+
+## Point Distribution in Castles
+- If you leave the round before your team is eliminated, you receive no points.
+- Kills are doubled at the end (**Kills * 2**).
+- Flag captures are multiplied by eight at the end (**Captures * 8**).
+- If you are on the winning team, the points are doubled at the end (**x2**).
+- If you have the most kills, you receive **+15 points**.
+- If you have the second-most kills, you receive **+10 points**.
+- If you have the third-most kills, you receive **+5 points**.
+- If you invested more than 60% of the collected gold in structures, you receive **+12 points**.
+- Finally, this formula is applied: 
+
+$$
+3,5 \cdot \sqrt{\frac{7 \cdot \text{Total Points}}{3}}
+$$
+
+---
+
+## Premium Features
+- Premium players have up to four votes in the voting system, depending on their rank.
+- A favorite map can be added to the map voting at any time.
+- Premium players receive up to three times more Pixels.
+- Premium players can kick other people from a full team during the voting phase.
+- Be displayed in the normal standard color with `/togglerank`.
+
+You can read about which Premium rank offers which advantages [here](/ranks/premium/).
+
+## Commands
+| Command | Function |
+| :--- | :--- |
+| `/jointeam <Color>`, `/team` | Joins a team |
+| `/kill` | Kills yourself |

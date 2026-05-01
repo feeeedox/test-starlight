@@ -1,0 +1,272 @@
+---
+title: All Commands
+description: Here is a list of commands that could help you on our network.
+---
+
+import { LinkCard } from '@astrojs/starlight/components'
+
+:::note
+Here you will find a detailed list of all commands available on the server.
+Variables marked with `<>` are required, while attributes marked with `[]` are optional.
+:::
+
+## General Commands
+These commands are globally usable and available to you at any time.
+
+| Command | Function |
+| :--- | :--- |
+| `/achievements`, `/ach` | Lists an overview of all achievements |
+| `/bannotify` | Disable notifications regarding your ban days |
+| `/discord unverify` | Disconnects the verification and link between your Minecraft and Discord account |
+| `/games` | Teleports you to the games servers |
+| `/help` | Shows the most important info about Timolia |
+| `/hub`, `/lobby` | Teleports you to the lobby |
+| `/joinme` | Opens the JoinMe menu, e.g., to create a JoinMe |
+| `/jointeam <Team-Color>`, `/team` | Join a team in Castles, Brainbow, and Mineception |
+| `/lang <Language>` | Change your language |
+| `/lookup <Player>`, `/lu` | Shows login information about a player |
+| `/msg` | Allows MSGs with friends, nobody, or everyone |
+| `/msg <Player>`, `/m` | Message a player in private chat |
+| `/present <Player> <Amount> [Message]`, `/gift`, `/donate` | Allows you to gift Pixels during the Christmas season |
+| `/quickjoin <Gamemode>` | Joins a game mode via command |
+| `/rank` | Shows your current ingame rank and its duration |
+| `/register <E-Mail>` | Registers you for the website |
+| `/stats [1,3,30,all]` | Shows your stats in most modes |
+| `/top` | Shows the top 10 players of the last 30 days in a game mode |
+| `/tutorial` | Start a tutorial (not available in all modes) |
+| `/vote <Number>` | Vote for a map in a game mode |
+
+**[Premium](/ranks/premium/) only**:
+| `/togglerank`, `/tr` | Be displayed as a normal player in all game modes |
+
+**[Subscriber](/ranks/premium/) only**:
+| `/fly` | Allows you to fly in the main lobby |
+
+**[<span class='pro'>Pro+</span>](/ranks/premium/) only**:
+| `/ptime <day/night/midnight/sunrise/noon/afternoon/sunset/reset/hh:mm>` | Change the time for yourself |
+| `/pweather <sun/rain/reset>` | Change the weather for yourself |
+
+**[<span class='expert'>Expert</span>](/ranks/premium/) only**:
+| `/giftpremium <Player>` | Gift 3 days of Pro to a player (once every 30 days) |
+
+**[<span class='mvp'>VIP</span>](/ranks/youtube/) only**:
+| `/nick` | Allows you to nick yourself |
+| `/unnick` | Allows you to unnick yourself |
+
+**[<span class='youtuber'>YouTuber</span>](/ranks/youtube/) only**:
+| `/forcemap` | Force a specific map in a game with a voting system |
+| `/giftpremium <Player>` | Gift 3 days of Pro to a player three times a day |
+| `/nick` | Allows you to nick yourself |
+| `/startgame` | Start a game |
+| `/unnick` | Allows you to unnick yourself |
+| `/vanish`, `/v` | Allows you to become invisible in 1vs1, Jumpworld, and in the lobbies |
+
+### Report System
+
+| Command | Function |
+| :--- | :--- |
+| `/report <Player>`, `/rp` | Creates a report after selecting the category |
+| `/reportbugusing <Player> <Description>` | Creates a bugusing report |
+| `/reportevidence <Player> <Evidence>` | Creates a report with evidence |
+| `/reportinfo <ID>` | Shows all info about a report |
+| `/reportjnr <ID>` | Creates a report about a Jump and Run in Jump World |
+| `/reports [Page]` | Opens an overview of your reports |
+| `/reportstats` | Shows the success rates of your created reports |
+
+### Lobby
+| Command | Function |
+| :--- | :--- |
+| `/stats <Player>` | Shows the stats of a player |
+| `/stats <Player> <Player>...` | Allows you to compare the stats of multiple players |
+| `/spawn` | Teleports you back to the spawn of the Hub |
+| `/sync {0, 1, 2...]`, `/armorsync` | Synchronizes the color-changing armor from the PixelShop |
+
+### Friend System
+
+Instead of `/friend`, you can use `/f`.
+
+| Command | Function |
+| :--- | :--- |
+| `/friend <Player>`, `/friend add` | Sends or accepts a friend request |
+| `/friend broadcast <Message>`, `/f bc` | Sends a broadcast to all currently online friends |
+| `/friend deny <Player>` | Declines a friend request |
+| `/friend ignore <Player>` | The ignored player cannot send you a friend request |
+| `/friend list, /friends` | Shows a list of your friends |
+| `/friend remove <Player>`, `/friend rem` | Removes a player from your friend list |
+| `/friend requests`, `/friend req` | Lists unanswered friend requests |
+| `/friend teleport <Player>`, `/friend tp` | Teleports you to a friend |
+| `/friend toggle` | Shows an overview of customizable settings |
+| `/friends online` | Shows your friends who are currently online |
+
+### Party System
+
+| Command | Function |
+| :--- | :--- |
+| `/party` | Creates a new party or opens party management |
+| `/party demote <Player>` | Demotes a player to member |
+| `/party help` | Shows all commands of the party system |
+| `/party invite <Player>` | Invites a player to your party |
+| `/party join <Player>` | Joins a party |
+| `/party leave` | Leave the current party |
+| `/party promote <Player>` | Promotes a player to moderator |
+| `/party togglechat` | Toggles between party chat and normal chat |
+
+### Two-Factor Authentication
+
+With Two-Factor Authentication, you prevent unauthorized persons from playing on Timolia with your account. Upon login, you will be asked for a code that your phone automatically regenerates every 30 seconds. This way, only people with access to your phone can verify. If you lose your phone, you can still log in with backup codes, which you receive when setting up 2fa and should keep safe.
+
+<LinkCard
+    icon='rocket'
+    title='Two-Factor Authentication'
+    description='Here you can find a whole page full of information about Two-Factor Authentication'
+    href='/general/2fa'
+/>
+
+| Command | Function |
+| :--- | :--- |
+| `/2fa` | Shows the help for Two-Factor Authentication |
+| `/2fa buc` | Lists all unused backup codes |
+| `/2fa disable` | Disables Two-Factor Authentication |
+| `/2fa logout` | Kicks you from the network and logs you out of Two-Factor Authentication |
+| `/2fa setup` | Sets up Two-Factor Authentication |
+
+## Commands for Individual Modes
+
+### 1vs1
+| Command | Function |
+| :--- | :--- |
+| `/bestofx <Player> <Amount>` | Challenges a player to a Best of 3 or Best of 5 |
+| `/challenge <Player>`, `/c` | Challenges a player to a duel |
+| `/compare <Name> <Name>` | Shows the combat statistics of two players |
+| `/endmatch` | The fight ends after one minute with a decision through the middle |
+| `/importkit <Number>` | Import one of your kits in the kit area |
+| `/join <Name>` | Joins a tournament |
+| `/join <Name> <Password>` | Joins a password-protected tournament |
+| `/kit`, `/k` | Opens the selected kit in your inventory |
+| `/kit <Name(:1/2/3/4/5)>` | Selects another player's kit |
+| `/kitinfo` | Shows info about the selected kit |
+| `/kits` | Lists all kits created by Timolia |
+| `/lastinv <Player>`, `/inv` | Shows the last inventory of a player |
+| `/leave`, `/l` | Leaves a tournament or the queue |
+| `/liveinv <Player>` | Shows the current inventory of a player |
+| `/matchinfo` | Shows information about the current fight |
+| `/queue`, `/q` | Adds you to the queue |
+| `/rankinfo` | Shows information about the current rank |
+| `/season [Number]` | Shows the kit of the current or specified season, leaderboards, your points and rankings |
+| `/settings` | Opens the settings |
+| `/spectate <Player>`, `/spec` | Lets you observe a player's fight |
+| `/stats` | Shows you your stats |
+| `/stats <Name>` | Shows you the stats of a player |
+| `/statsmenu [Name]` | Opens the stats menu |
+| `/surrender` | You kill yourself and end the fight prematurely |
+| `/t` | Shows tournament information |
+| `/team accept <Name>` | Joins a team |
+| `/team invite <Name>` | Invites a player to your team |
+| `/team kick <Name>` | Kicks a player from your team |
+| `/team leave <Name>` | Withdraws a team invitation |
+| `/winstreak`, `/streak` | Shows your current winstreak |
+| `/xp <Level>` | Sets an XP level for your kit |
+
+**[Premium](/ranks/premium/) only**:
+| `/create [Password]` | Creates a tournament (optionally with a password) |
+| `/modify` | Edits the tournament settings |
+| `/near <kit> [name]` | Shows the distance to the next rank for each kit leaderboard |
+| `/start [Time]` | Starts your tournament |
+
+**[<span class='pro'>Pro+</span>](/ranks/premium/) only**:
+| `/hat` | Sets the item in your hand as the helmet of your kit |
+| `/rankinfo` | Provides information about your current global rank |
+| `/roadToKD <Goal>`, `/roadToWL <Goal>` | Shows the number of games to be won to reach the target K/D or W/L |
+| `/team setcolor` | Colors your name according to the chosen color |
+
+### Arcade
+| Command | Function |
+| :--- | :--- |
+| `/join <Player>` | Joins a tournament |
+| `/last` | Shows the last played games |
+| `/leave` | Leave a tournament |
+| `/rot` | Shows the game rotation |
+
+**[Premium](/ranks/premium/) only**:
+| `/create` | Creates a tournament |
+| `/invite <Player>` | Invites a player to your tournament |
+
+### Castles
+| Command | Function |
+| :--- | :--- |
+| `/jointeam <Team-Color>`, `/team` | Join a team |
+| `/kill` | Kill yourself |
+
+### JumpWorld
+| Command | Function |
+| :--- | :--- |
+| `/amboss`, `/crystals`, `/entities`, `/portals` | Opens the menu for an overview of entities |
+| `/b` | Opens the build-info menu |
+| `/buildspec` | Sets you to spectator mode in build mode |
+| `/checkpoint`, `/fall`, `/kill` | Teleports you back to the last checkpoint |
+| `/duel accept <Player>` | Accepts the invitation to a duel |
+| `/duel invite <Player>` | Invites a player to a duel |
+| `/duel kick <Player>` | Kicks a player from a duel |
+| `/duel leave <Player>` | Leaves a duel |
+| `/duel promote <Player>` | Appoints a new duel leader |
+| `/enter <ID>`, `/e <ID>` | Enters a specific Jump 'n' Run |
+| `/info`, `/jnr` | Provides information about the Jump 'n' Run |
+| `/jnrsettings` | Shows the settings of the Jump 'n' Run |
+| `/join <Name>` | Joins the Jump 'n' Run that [player] is currently on |
+| `/jump` | Switches between jump and build mode |
+| `/kit` | Gives you the starting items in build mode |
+| `/leave`, `/l` | Leaves the current Jump 'n' Run |
+| `/resetjnr` | Restarts the Jump 'n' Run |
+| `/setblock`, `/sb` | Places the block in your hand under you |
+| `/setstart` | Sets the starting point of your Jump 'n' Run |
+| `/top <ID>` | Shows the top times of the Jump 'n' Run with the ID [id] |
+| `/top <ID> -f` | Shows the fewest fails of the Jump 'n' Run with the ID [id] |
+| `/tpstart` | Resets you to the start of the Jump 'n' Run |
+
+**[Premium](/ranks/premium/) only**:
+| `/multibuild <3,6>`, `/mb <3,6>` | You can place up to 3 (from Pro) or up to 6 (from MVP+) blocks at once |
+| `/seticon` | Sets a custom icon for your Jump 'n' Run |
+| `/reseticon` | Resets the icon of the Jump 'n' Run |
+
+**[<span class='mvp'>MVP</span>](/ranks/premium/) only**:
+| `/skull [Name]` | Gives you a player head |
+
+### Freebuild
+| Command | Function |
+| :--- | :--- |
+| `/accepttpa <Player>`, `/accepttphere` | Accepts and allows a player to teleport to you |
+| `/backpack`, `/bp`, `/ec` | Opens your personal backpack |
+| `/claim` | Claims the chunk you are currently in |
+| `/foodmenu` | Opens the food shop |
+| `/home` | Opens the teleport points menu for you |
+| `/missions` | Provides access and overview of all active missions |
+| `/removebinding` | Removes the curse of binding from all armor pieces |
+| `/settings` | Opens the Freebuild settings |
+| `/spawn` | Takes you directly to the spawn of the Freebuild world |
+| `/tpa <Player>`, `/tphere <Player>` | Sends a teleport request to another player |
+| `/trade <Player>` | Opens a trade with another player |
+| `/tutorial` | Shows you a Freebuild introduction |
+| `/unclaim` | Releases your chunk |
+| `/workbench`, `/wb`, `/crafting` | Opens a workbench for you |
+
+### SecretGames
+| Command | Function |
+| :--- | :--- |
+| `/cr lobby` | Takes you back to the center |
+| `/cr stats <Player>` | Lists the stats of a player |
+| `/hub` | Takes you back to the main lobby |
+
+### UHC
+| Command | Function |
+| :--- | :--- |
+| `/backpack`, `/bp` | Opens the shared inventory in Team UHCs |
+| `/config` | Lists the current configuration of the UHC |
+| `/coordinates`, `/coords` | Sends a message to your teammates with your coordinates |
+| `/dragons <Player>` | With the `Dragons` scenario active, the UHC host can spawn an Ender Dragon at the player |
+| `/fix` | Allows you to reload all players |
+| `/helpop` | Allows you to ask the team questions regarding the UHC at any time |
+| `/invite <Player>` | Allows you to invite players to your team in Team UHCs |
+| `/inviteaccept <Player>` | Accepts team invitations in Team UHCs |
+| `/scenarios`, `/scn`, `/uhc` | Shows you the active scenarios |
+| `/showhealth <Player>`, `/h <Player>` | Shows the health of the specified player |
+| `/topkills`, `/top`, `/tk` | Shows the player(s) with the most kills |

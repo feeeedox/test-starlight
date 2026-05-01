@@ -1,0 +1,113 @@
+---
+title: JumpWorld
+description: All the info for JumpWorld can be found here.
+---
+
+import { Image } from 'astro:assets'
+import banner from '../../../../assets/images/games/JumpWorld.png'
+
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">JumpWorld</div>
+    <div class="banner-text-gradient">JumpWorld</div>
+</div>
+
+## Game Concept
+In JumpWorld, you can play a wide variety of Jump and Runs, but you can also build them yourself. Furthermore, you can compete with friends in duels.
+
+<p></p>
+
+## How it works
+- You can search for Jump and Runs using the rocket in your inventory.
+- If you want to play a specific Jump and Run, use the command `/enter <ID>`.
+- You can challenge a player to a duel with `/duel invite <Player>` or by left-clicking them with a sword.
+- You can reach the Jump and Run of the Day via the portal in the JumpWorld lobby.
+- The goal of every course is a golden pressure plate; iron pressure plates are checkpoints.
+- When you enter a Jump and Run, several items are placed in your inventory. Use the red dye to teleport back to your last checkpoint.
+- The second item in your inventory allows you to adjust player visibility.
+- At the end of a Jump and Run, you can rate the course in three categories (Creativity/Jumps/Visuals).
+- If you want to inspect a Jump and Run, you can activate flight mode with `/spec`, but you will no longer be able to finish the course.
+
+---
+
+## Jump and Run of the Day
+Every day, one course is crowned the Jump and Run of the Day.
+To become the daily winner:
+
+- Published between 8:00 PM on Day X-7 and 8:00 PM on Day X-1.
+- Completed by at least 10% of all players who attempted it.
+- At least 15 ratings.
+- Better rated than all others who also meet the criteria.
+
+---
+
+## Building Mode
+- Use the firework star in your inventory to select a building slot. If other players are supposed to help build, you must first invite them to a duel.
+- You can choose between various standard worlds or create your own world in a void.
+- Use `/b` to access special blocks; portals and effect pressure plates can be edited with a right-click.
+- Use `/setstart` to set the starting point of your course, and `/setblock` to place a block directly beneath you.
+- To publish your Jump and Run, you must have successfully completed it yourself once. To do this, select "Run through JnR" in the respective building slot.
+- In the build menu, you can give your course a name.
+- The maximum build limit is 500,000 blocks.
+
+---
+
+## Premium Features
+- Premium players receive up to three times more Pixels.
+- Up to 3 building slots depending on rank.
+- <span class='mvp'>MVP</span> or higher: Armor stands and player heads while building.
+- <span class='pro'>Pro</span> or higher: Use Multibuild to place up to 3 blocks at once.
+- <span class='mvp'>MVP+</span> or higher: Use Multibuild to place up to 6 blocks at once.
+- Place up to 128 entities depending on rank.
+- Be displayed as a normal player with `/togglerank`.
+
+You can read about which Premium rank offers which advantages [here](/ranks/premium/).
+
+## WorldEdit Commands
+You can find out which commands are unlocked for you [here](https://jumpworld.timolia.de/commands/worldedit).
+
+## JumpWorld Browser
+On this website, you have the opportunity to search for JnRs, view their top times and ratings, and—if you are online in-game—join the JnR directly by clicking the "Join" button.
+You can find the Jumpworld Browser [here](https://jumpworld.timolia.de/home). Regular events are also held there!
+
+---
+
+## Commands
+| Command | Function |
+| :--- | :--- |
+| `/amboss`, `/crystals`, `/entities`, `/portals` | Opens the menu for an overview of entities |
+| `/b` | Opens the build info menu |
+| `/buildspec` | Sets you to spectator mode in build mode |
+| `/checkpoint`, `/fall`, `/kill` | Teleports you back to the last checkpoint |
+| `/duel accept <Player>` | Accepts a duel invitation |
+| `/duel invite <Player>` | Invites a player to a duel |
+| `/duel kick <Player>` | Kicks a player from a duel |
+| `/duel leave` | Leaves a duel |
+| `/duel promote <Player>` | Appoints a new duel leader |
+| `/enter <ID>`, `/e <ID>` | Enters a specific Jump 'n' Run |
+| `/info`, `/jnr` | Displays information about the Jump 'n' Run |
+| `/jnrsettings` | Displays the settings of the Jump 'n' Run |
+| `/join <Name>` | Joins the Jump 'n' Run that [Player] is currently on |
+| `/jump` | Toggles between jump and build mode |
+| `/kit` | Gives you the starting items in build mode |
+| `/leave`, `/l` | Leaves the current Jump 'n' Run |
+| `/resetjnr` | Restarts the Jump 'n' Run |
+| `/setblock`, `/sb` | Places the block in your hand beneath you |
+| `/setstart` | Sets the starting point of your Jump 'n' Run |
+| `/top <ID>` | Shows the top times for the Jump 'n' Run with the ID [id] |
+| `/top <ID> -g` | Shows the top times of all players for the Jump 'n' Run with ID [id] |
+| `/top <ID> -f` | Shows the fewest fails for the Jump 'n' Run with ID [id] |
+| `/tpstart` | Resets you to the start of the Jump 'n' Run |
+
+**[Premium](/ranks/premium/) only**:
+| Command | Function |
+| :--- | :--- |
+| `/multibuild <3,6>`, `/mb <3,6>` | Place up to 3 (from <span class="pro">Pro</span>) or 6 (from <span class="mvp">MVP+</span>) blocks at once |
+| `/seticon` | Sets a custom icon for your Jump 'n' Run |
+| `/reseticon` | Resets the Jump 'n' Run icon |
+
+**[<span class='mvp'>MVP</span>](/ranks/premium/) only**:
+| Command | Function |
+| :--- | :--- |
+| `/skull [Name]` | Gives you a player head |

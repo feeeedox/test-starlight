@@ -1,0 +1,119 @@
+---
+title: Arcade
+description: All the info for Arcade can be found here.
+---
+import { Image } from 'astro:assets'
+import banner from '../../../../assets/images/games/Arcade.png'
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+:::danger[Information]
+This mode is currently no longer available.
+:::
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">Arcade</div>
+    <div class="banner-text-gradient">Arcade</div>
+</div>
+
+## Game Concept
+
+A total of twenty minigames are played in Arcade, guaranteeing variety and fun. Compete individually or in tournaments against everyone else and win the most games.
+
+<YouTube id="https://youtu.be/hctHaY6g-8A" />
+
+<p></p>
+
+## How it works
+- In an Arcade lobby, all twenty minigames rotate continuously.
+- Each minigame requires different skills and challenges all your facets.
+- You can prove yourself in both individual matches and tournaments.
+
+---
+
+## The Minigames
+
+### 1vs1
+The goal of this game is to defeat your opponents in a duel. You fight one person after another; the last one standing wins the minigame.
+
+### Anvil-Crusher
+The goal is to be the last survivor. More anvils fall from the sky every second, which you must dodge. Tip: Set your FOV as low as possible or use zoom!
+
+### Bomberman
+The goal is to survive the longest. Use the keyboard to control your character through the map. Blocks blocking your path can be blown up with TNT. TNT is placed with the space bar. Power-ups like multiple bombs, higher range, and speed can be found on the map.
+
+### Clicker
+The goal is to be the first to hit the button on the gold block 64 times. The gold block changes position after every hit or miss. Accurate aiming is very important in this game.
+
+### Color Clock
+The goal is to reach the color field on the edge of the map that matches the wool block falling from the ceiling in the center before time runs out. It is important to decide tactically whether it is still worth running to the current color field or if you should head directly to the next one. The sequence of colors is displayed in the center by stacked wool blocks.
+
+### Cube Builder
+The goal is to have built the largest filled cube when time runs out. The total time available is chosen randomly beforehand. The particle marking limits the building area and helps you build the cube. If two or more cubes are the same size at the end, the one completed the fastest wins. Tip: Particle settings should be set to "All".
+
+### Electricity
+The goal is to escape the electricity. It flows through the grid and is marked by a glass pane. If it flows through you, you will be pushed off the grid. The last one remaining wins.
+
+### Fast-Bridging
+The goal is to build the longest path within a randomly generated time. If you jump down, you will have the blindness effect for a short time and cannot collect blocks.
+
+### Gravity
+The goal is to be the first to collect five points. Use the record to change your gravity and move forward; the next point is shown on your compass. Five colored glass blocks also show you the next point. Important: You must visit the points in the correct order.
+
+### Half-Heart-Race
+The goal is to reach the bottom—with only half a heart! The first to reach the finish wins.
+
+### Kabelsalat (Cable Mess)
+The goal is to be the first to connect two cable ends and bring the power flow to 100%. You can manipulate other cables by cutting them with scissors. If two live cables touch, they explode. This can be prevented by using an insulated cable.
+
+### Mini-DNA
+The goal is to be the first to reach height 16. Left-click on a block to set a checkpoint. The more checkpoints you set, the longer it takes for new blocks to spawn.
+
+### Quiz
+The goal is to reach the most points. Estimation and calculation tasks are presented.
+
+### Rubik's Cube
+The goal is to solve the most Rubik's Cubes within a certain time. A cube is considered solved when all sides of the cube have only one color. You move the cube by left- and right-clicking on the color fields.
+
+### Sammelfieber (Collection Fever)
+The goal is to have collected the most different items when time runs out. The world is randomly generated and limited to 24x24 chunks. The scoreboard shows how many different items have already been collected; at the end of the game, the "winner's inventory" is displayed.
+
+### Sumo
+The goal is to knock off as many opponents as possible. You get two points for each kill and lose one point for each death. You can save yourself once with the boost. Whoever has the most points at the end wins.
+
+### Tron
+The goal is to survive the longest. The minecarts leave trails of glass. As soon as an opponent's trail or an obstacle is touched, you die.
+
+### Turmspringen (High Diving)
+The goal is to collect the most points by hitting water holes. Depending on the size of the water hole, you get one, two, or three points. If you miss the water, you lose a point. The game ends when no one lands in the water after a certain time.
+
+### Wegweiser (Signpost)
+The goal is to be the first to reach the opposite side. To reach the finish, you must follow the colored glass blocks. The longer you wait, the faster and further the path is shown. If you jump on a wrong block or fall into the water, you must run from the beginning back to your last correct block.
+
+### YouTube Quiz
+The goal is to guess the most YouTuber skins in the fastest time possible. You must throw snowballs at the skin template to reveal its pixels. The first to guess the name gets three points, the second gets two, and all other players get one point upon guessing correctly. A total of eight rounds are played.
+
+---
+
+## Premium Features
+- Create public tournaments with `/create`.
+- Premium players receive up to three times more Pixels.
+- Favorite two or three games.
+- Be displayed in the normal standard color with `/togglerank`.
+
+You can read about which Premium rank offers which advantages [here](/ranks/premium/).
+
+## Commands
+
+| Command | Function |
+| :--- | :--- |
+| `/join <Name>` | Joins a tournament |
+| `/last` | Shows the last played games |
+| `/leave` | Leaves a tournament |
+| `/rot` | Shows the game rotation |
+
+**[Premium](/ranks/premium/) only**:
+| Command | Function |
+| :--- | :--- |
+| `/create` | Creates a public or private tournament |
+| `/invite <Name>` | Invites a person to your tournament |

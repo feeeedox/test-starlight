@@ -1,0 +1,201 @@
+---
+title: 1vs1
+description: All the info for 1vs1 can be found here.
+---
+import { Image } from 'astro:assets'
+import banner from '../../../../assets/images/games/1vs1.png'
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+<div class="banner-wrapper">
+    <Image src={banner} alt='banner' class='banner-image'/>
+    <div class="banner-text-shadow">1vs1</div>
+    <div class="banner-text-gradient">1vs1</div>
+</div>
+
+## Game Concept
+
+Play alone or in a team and prove your skills in 1vs1. Choose your own or other kits and find out who is better in fair fights.
+The kit can be freely assembled from everything the creative inventory, anvil, and enchantment table have to offer.
+Through the Black Marketeer, "hacker kits" containing modified items can be created.
+Work your way up the career ladder in our ranked system and reach the highest rank on the server.
+Challenge others alone or in a team or participate in a tournament and prove yourself against others.
+
+<YouTube id="https://youtu.be/CRG94nn-7C4" />
+
+<p></p>
+
+## How it works
+- In the kit area, your own kit can be created and modified as often as you like.
+- Right-click on the queue to select and change kit settings and options.
+- Left-click with the diamond sword on the queue zombie to enter the queue.
+- Left-click on someone to challenge them to a duel; right-click to send a team invitation.
+- Force the end of a fight with `/endmatch`. More info can be found [here](#endmatch).
+- Blocks explode after 15 seconds in every tournament and ranked match; in regular games, if `/endmatch` was used.
+- A click on the Nether Star in the hotbar provides an overview of all arenas in the lobby.
+- Right-click on a person to observe the fight from their perspective.
+- Via `/settings`, you can view options for the queue, kits, maps, and fights, as well as various options for the lobby and chat.
+- To find even fairer matches faster, you can play in the global queue against players across all lobbies.
+- You can view all combat statistics via `/statsmenu` or at the statistics skeleton in the lobby.
+
+---
+
+## Ranked System
+
+Work your way up the career ladder in our ranked system and reach the highest rank on the server.
+There are a total of 16 ranks to achieve. All players in 1vs1 have an assigned value: Ranked Points.
+They increase with a victory and decrease if you lose a game. Your rank is determined by your total points.
+You can call up the exact point boundaries for individual ranks ingame with the command `/ranks`. All info about your current rank and point totals can be found under `/season`.
+
+| Rank | Points | |
+| :------: | :------: | ----- |
+| <b><span class='minecraft-darkgray'>1</span></b> | 0 - 99 |
+| <b><span class='minecraft-darkgray'>2</span></b> | 100 - 299 |
+| <b><span class='minecraft-gray'>3</span></b> | 300 - 699 |
+| <b><span class='minecraft-white'>4</span></b> | 700 - 1199 |
+| <b><span class='minecraft-green'>5</span></b> | 1200 - 1799 |
+| <b><span class='minecraft-darkgreen'>6</span></b> | 1800 - 2399 |
+| <b><span class='minecraft-lightpurple'>7</span></b> | 2400 - 2999 |
+| <b><span class='minecraft-darkpurple'>8</span></b> | 3000 - 3599 |
+| <b><span class='minecraft-blue'>9</span></b> | 3600 - 4199 |
+| <b><span class='minecraft-darkblue'>10</span></b> | 4200 - 4799 |
+| <b><span class='minecraft-yellow'>11</span></b> | 4800 - 5399 |
+| <b><span class='minecraft-gold'>12</span></b> | 5400 - 5999 |
+| <b><span class='minecraft-darkred'>13</span></b> | 6000 - 6599 |
+| <b><span class='minecraft-gray'>14</span></b> | 6600 - 7199 |
+| <b><span class='minecraft-gold'>15</span></b> | 7200 - 7999 |
+| <b><span class='minecraft-darkaqua'>16</span></b> | 8000+ |
+
+### Point Calculation
+There is a separate leaderboard for each of the 6 ranked kits of a season. Points are calculated independently for each ranked kit.
+Your global ranked points, which determine your rank, are the sum of your ranked points across individual kits.
+You start with 0 points for each kit. You gain points for won games and lose them for losses. In addition to ranked points, all players have an Elo value for each kit.
+This is not shown to you but works in the background to determine your skill level. The difference between your points, your Elo, and the opponent's Elo determines how many points you gain or lose.
+Your starting Elo in each kit is 1000. You can find out more about how Elo is calculated in our system [here](https://en.wikipedia.org/wiki/Elo_rating_system).
+
+### Seasons
+At the end of each season, all ranked leaderboards and points are reset, and the top-placed players of the last season are displayed in the PvP lobby. You can view all statistics (including yours) from previous seasons ingame with `/season [number]`.
+In each season, 6 ranked kits are offered. You can see which ones are currently active and how long the current season lasts ingame with `/season`.
+The 6 kits consist of 3 kits specified by the team and 3 kits determined by the community. Voting for community kits takes place during the last week of the previous season.
+
+---
+
+## Winstreaks
+Earn additional Pixels with winstreaks and use them to buy great items in the Pixelshop. [Premium](/ranks/premium/) players receive more Pixels.
+
+| Winstreak | Pixels |
+| ------ | ------ |
+| 3 Wins | 3 Pixels |
+| 6 Wins | 6 Pixels |
+| 10 Wins | 10 Pixels |
+| 15 Wins | 10 Pixels |
+| 20 Wins | 15 Pixels |
+| 30 Wins | 30 Pixels | 
+| 40 Wins | 30 Pixels |
+| 50 Wins | 40 Pixels |
+| 60 Wins | 40 Pixels |
+| 70 Wins | 40 Pixels |
+| 80 Wins | 40 Pixels |
+| 90 Wins | 40 Pixels |
+| 100 Wins | 50 Pixels |
+
+Once 100 consecutive wins are reached, the rewards no longer increase; you receive the same reward for every 10 additional wins.
+You can view your current winstreak with the command `/winstreak`. Note: Your winstreak only increases when playing via the queue.
+
+## FFA
+FFA is a tournament format where all players fight against each other on a shared map with the same starting equipment. Depending on the settings of the tournament creator, players may have several lives.
+While players get another chance at victory with a new life, they do not receive new materials. Therefore, tactical distribution and use of equipment is an important part of the game. The goal of the game is to be the last person surviving. As the name implies, every player fights alone against the others, which is why any form of support or favoritism towards another opponent is prohibited throughout the entire tournament.
+
+## Friday Tournaments
+Every Friday at 8:00 PM, a large Timolia tournament takes place. This can be entered from any 1vs1 server with `/join Timolia`.
+The tournament is simultaneously broadcast live in a stream. The respective streamers and kits are announced on [Twitter](https://twitter.com/TimoliaTeam) and in the [Timolia Discord](/discord/).
+First place has the chance to win the [MVP rank](/ranks/premium/) for one month.
+If the first-place winner accepts the risk match against the streamers and wins, they can even win 2 months. However, if they lose, they only receive half a month.
+Furthermore, the top 3 receive a medal and a corresponding subtitle. Everyone who makes it to the final server also receives 3 days of Pro!
+
+---
+
+## Endmatch
+The end of a fight can be forced with `/endmatch`. Once this command is executed, the fight will only last one more minute. Whoever was closer to the center on average during the last 30 seconds wins the fight. This command cannot be used in a tournament.
+`/endmatch` can only be used after a set amount of time. This varies for different kits.
+Here is an overview of the minimum playtimes until the endmatch can be used:
+
+| Kit         | Time         |
+| ----------- | ------------ |
+| 1Bar        | 60 Seconds   |
+| Basic       | 45 Seconds   |
+| NoHitDelay  | 60 Seconds   |
+| OP          | 60 Seconds   |
+| PotPVP      | 300 Seconds  |
+| Sniper      | 300 Seconds  |
+| Soup        | 300 Seconds  |
+| Standard    | 45 Seconds   |
+| UHC         | 180 Seconds  |
+| SG          | 180 Seconds  |
+| Custom Kits | 30 Seconds   |
+
+---
+
+## Premium Features
+- While normal players can only save one kit, Premium players have up to 5 slots available depending on their rank. In map selection, normal players have access to one slot, while Premium players have up to 5 slots depending on rank.
+- Furthermore, with Premium, you can create tournaments (`/create`) and teams with more than two members. Some ranks can even start server-wide 1vs1 tournaments (`/create`).
+- Earn up to three times more Pixels with Premium.
+- Put items in your hand on your head in the kit area with `/hat`.
+- Choose your team color with `/team setcolor`.
+- Be displayed in the normal standard color with `/togglerank`.
+
+You can read about which Premium rank offers which advantages [here](/ranks/premium/).
+
+## Commands
+
+| Command | Function |
+| :--- | :--- |
+| `/bestofx <Name> <Amount>` | Challenges a person to a Best of 3 or Best of 5 |
+| `/challenge <Name>`, `/c` | Challenges other players to a duel |
+| `/compare <Name> <Name>` | Shows the combat statistics of two players |
+| `/endmatch` | The fight ends after one minute with a decision via the center |
+| `/importkit <Number>` | Import one of your kits in the kit area |
+| `/join <Name>` | Joins a tournament |
+| `/join <Name> <Password>` | Joins a password-protected tournament |
+| `/kit`, `/k` | Opens the selected kit in your inventory |
+| `/kit <Name(:1/2/3/4/5)>` | Selects the kit of another player |
+| `/kitinfo` | Shows info about the selected kit |
+| `/kits` | Lists all kits created by Timolia |
+| `/lastinv <Name>`, `/inv` | Shows the last inventory of a person |
+| `/leave`, `/l` | Leaves a tournament or the queue |
+| `/liveinv <Name>` | Shows the current inventory of a person |
+| `/matchinfo` | Shows information about the current fight |
+| `/queue`, `/q` | Adds you to the queue |
+| `/rankinfo` | Shows information about the current rank |
+| `/season [number]` | Shows the kit of the current or specified season, leaderboards, your points, and rankings |
+| `/settings` | Opens the settings |
+| `/spectate <Name>`, `/spec` | Lets you observe a fight |
+| `/stats` | Shows you your stats |
+| `/stats <Name>` | Shows you the stats of other players |
+| `/statsmenu [Name]` | Opens the stats menu |
+| `/surrender` | You kill yourself and end the fight prematurely |
+| `/t` | Shows tournament information |
+| `/team accept <Name>` | Joins a team |
+| `/team invite <Name>` | Invites a person to your team |
+| `/team kick <Name>` | Kicks a person from your team |
+| `/team leave <Name>` | Withdraws a team invitation |
+| `/winstreak`, `/streak` | Shows your current winstreak |
+| `/xp <Level>` | Sets an XP level for your kit |
+
+**[Premium](/ranks/premium/) only**:
+| Command | Function |
+| :--- | :--- |
+| `/create [Password]` | Creates a tournament (optional with a password) |
+| `/modify` | Edits the tournament settings |
+| `/near <kit> [Name]` | Shows the distance to the next rank for each kit leaderboard |
+| `/start [Time]` | Starts your tournament |
+
+**[<span class='pro'>Pro+</span>](/ranks/premium/) only**:
+| Command | Function |
+| :--- | :--- |
+| `/hat` | Sets the item in your hand as the helmet of your kit |
+| `/rankinfo` | Provides information about your current global rank |
+| `/roadToKD <Goal>`, `/roadToWL <Goal>` | Shows the number of games to be won to reach a target K/D or W/L |
+| `/team setcolor` | Colors your name according to the chosen color |
+
+## Arenas and Maps
+Self-built maps for this mode can be submitted on [Discord](https://timolia.de/discord).
