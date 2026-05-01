@@ -1,6 +1,7 @@
 {
   "footer": {
-    "title": "Titel",
-    "subtitle": "Untertitel"
+    "title": "Copyright © {{year}} Timolia UG. Built with ",
+    "subtitle": "We are not affiliated with or endorsed by Mojang, AB, or any other brands. All rights reserved.",
+    "imprint": "Imprint"
   }
 }
